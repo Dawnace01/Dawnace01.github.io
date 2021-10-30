@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contact</title>
+</head>
+<body>
+<header id="id-header-top">
+    <nav>
+        <img src="img/logo.png" alt="logo"/>
+        <input type="checkbox">
+        <span></span>
+        <ul>
+            <li>
+                <a href="index.html" id="home">
+                    <p>ACCUEIL</p>
+                </a>
+            </li>
+            <li>
+                <a href="presentation.html" id="pres">
+                    <p>PRESENTATION</p>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html" id="contact">
+                    <p>CONTACT</p>
+                </a>
+            </li>
+            <li id="blog">
+                <a>
+                    <p>BLOG</p>
+                </a>
+                <ul id="side-menu">
+                    <li><a href="articles/minecraft-live-is-back-once-again.html">Minecraft Live is back once again</a>
+                    </li>
+                    <li><a href="articles/nintendo-could-add-game-boy-game-boy-color.html">Nintendo could add game boy
+                        game boy color</a></li>
+                    <li><a href="articles/what-is-cryptomining.html">What is cryptomining</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="inscription.html" id="inscr">
+                    <p>INSCRIPTION</p>
+                </a>
+            </li>
+            <li>
+                <a href="les-chiffres.html" id="chiffres">
+                    <p>LES CHIFFRES</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h1>Contact</h1>
+    <form action="https://ressources.site" method="post">
+        <fieldset>
+            <legend>Nous contacter</legend>
+
+            <label for="subject">Sujet du message*</label>
+            <input id="subject" type="text" name="subject" required>
+
+            <label for="lastname">Nom*</label>
+            <input id="lastname" type="text" name="lastname" required>
+
+            <label for="firstname">Prénom*</label>
+            <input id="firstname" type="text" name="firstname" required>
+
+            <label for="email">Adresse mail*</label>
+            <input id="email" type="email" name="email" required>
+
+            <label for="phone">Numéro de téléphone*</label>
+            <input id="phone" type="tel" name="phone" required>
+
+            <label for="content">Message*</label>
+            <textarea id="content" type="text" name="content" required></textarea>
+        </fieldset>
+        <div class="flex">
+            <button type="submit" id="submit">Envoyer</button>
+            <button type="reset">Effacer</button>
+        </div>
+    </form>
+    <aside class="white">
+        <h2>Nos informations</h2>
+
+        <h3>Nous trouver</h3>
+        <ul>
+            <li>Notre addresse postale : 75517 Casey Ports Suite 128 - Eagan, NJ</li>
+            <li>Notre numéro de téléphone : 04.87.49.01.75</li>
+            <li>Notre adresse mail : <a
+                    href="mailto:lucas.cecilon@etu.univ-lyon1.fr">lucas.cecilon@etu.univ-lyon1.fr</a>.
+            </li>
+        </ul>
+
+        <h3>Nos horaires d'accueil</h3>
+        <table class="black">
+            <caption>Horaires d'ouverture</caption>
+
+            <thead>
+            <tr>
+                <th></th>
+                <th>Ouverture</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <th>Lundi</th>
+                <td>8h30-12h30, 13h45-17h45</td>
+            </tr>
+            <tr>
+                <th>Mardi</th>
+                <td>8h30-12h30, 13h45-17h45</td>
+            </tr>
+            <tr>
+                <th>Mercredi</th>
+                <td>8h30-12h30, 13h45-17h45</td>
+            </tr>
+            <tr>
+                <th>Jeudi</th>
+                <td>8h30-12h30, 13h45-17h45</td>
+            </tr>
+            <tr>
+                <th>Vendredi</th>
+                <td>8h30-12h30, 13h30-17h30</td>
+            </tr>
+            <tr>
+                <th>Samedi</th>
+                <td>9h00-12h</td>
+            </tr>
+            <tr>
+                <th>Dimanche</th>
+                <td>Fermé</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>Dernières actualités</h2>
+        <a href="blog.html#article1">Article 1</a>
+        <a href="blog.html#article2">Article 2</a>
+        <a href="blog.html#article3">Article 3</a>
+    </aside>
+</main>
+<footer>
+    <h2>Trois derniers articles</h2>
+    <nav>
+        <ul class="flex">
+            <li><a href="articles/minecraft-live-is-back-once-again.html">Minecraft Live is back once again</a></li>
+            <li><a href="articles/nintendo-could-add-game-boy-game-boy-color.html">Nintendo could add game boy game boy
+                color</a></li>
+            <li><a href="articles/what-is-cryptomining.html">What is cryptomining</a></li>
+        </ul>
+    </nav>
+    <h2>Lorem ipsum dolor</h2>
+    <p>
+        Pour <a href="contact.html">nous contacter</a>.
+    </p>
+    <p id="copyright">&copy;Lucas_Cécillon</p>
+</footer>
+<script src="js/script.js"></script>
+<script>
+    /**
+     * verification avant envoi de formulaire
+     */
+    const inputSubject = document.querySelector('#subject')
+    const inputLastname = document.querySelector('#lastname')
+    const inputFirstname = document.querySelector('#firstname')
+    const inputEmail = document.querySelector('#email')
+    const inputPhone = document.querySelector('#phone')
+    const inputContent = document.querySelector('#content')
+    const validFormButton = document.querySelector('#submit')
+
+    validFormButton.setAttribute('disabled', true)
+    inputSubject.addEventListener('keyup', validTotal)
+    inputLastname.addEventListener('keyup', validTotal)
+    inputFirstname.addEventListener('keyup', validTotal)
+    inputPhone.addEventListener('keyup', validTotal)
+    inputEmail.addEventListener('keyup', validTotal)
+    inputContent.addEventListener('keyup', validTotal)
+
+    /* si tout est validé ou non (bool) */
+    function validTotal() {
+        if (validSubject() && validName() && validMail() && validPhone() && validMessage()) {
+            validFormButton.removeAttribute('disabled')
+        } else {
+            validFormButton.setAttribute('disabled', true)
+        }
+    }
+
+    /* vérification du sujet (regex) */
+    function validSubject() {
+        const regex = /^(([0-9]|[a-zA-Z]){1,180})$/;
+
+        if (regex.test(String(inputSubject.value).toLowerCase())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /* vérification du nom (regex) */
+    function validName() {
+        const regex = /^(([a-zA-Z]){1,20})$/; /* zwithout accents */
+
+        if (regex.test(String(inputLastname.value).toLowerCase()) && regex.test(String(inputFirstname.value).toLowerCase())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /* vérification du mail (regex) */
+    function validMail() {
+        const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        if (regex.test(String(inputEmail.value).toLowerCase())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /* vérification du phone (regex) */
+    function validPhone() {
+        const regex = /^([0-9]{10})$/;
+
+        if (regex.test(String(inputPhone.value).toLowerCase())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /* vérification du message (regex) */
+    function validMessage() {
+        const regex = /^((.|\n){1,999})$/;
+
+        if (regex.test(String(inputContent.value).toLowerCase())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
