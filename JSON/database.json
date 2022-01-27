@@ -1,0 +1,25 @@
+{
+  "college": "My School Example",
+  "registeredStudents": [
+    {
+      "name": "Boucard",
+      "firstname": "Quentin",
+      "age": "14",
+      "schoolLvl": "quatrieme",
+      "classe": "A",
+      "isVaccinate": true,
+      "dateOfContamination": "2022-01-27",
+      "dateOfReturn": "2022-02-03"
+    },
+    {
+      "name": "Cécillon",
+      "firstname": "Lucas",
+      "age": "12",
+      "schoolLvl": "sixieme",
+      "classe": "C",
+      "isVaccinate": true,
+      "dateOfContamination": "2022-01-20",
+      "dateOfReturn": "2022-01-27"
+    }
+  ]
+}
