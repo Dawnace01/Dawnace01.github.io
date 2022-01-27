@@ -8,7 +8,7 @@
     <title>Mon site</title>
 </head>
 <body>
-    <h1>Bienvenue sur mon site</h1>
+    <h1>Bienvenue sur mon site <?= "en php !!!!" ?></h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos fugiat ipsam magni mollitia repudiandae unde.</p>
 </body>
 </html>
