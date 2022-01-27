@@ -1,12 +1,77 @@
 {
   "college": "My School Example",
+  "classes": [
+    {
+      "name": "sixieme A",
+      "nbStudent": 30
+    },
+    {
+      "name": "sixieme B",
+      "nbStudent": 30
+    },
+    {
+      "name": "sixieme C",
+      "nbStudent": 30
+    },
+    {
+      "name": "sixieme D",
+      "nbStudent": 30
+    },
+    {
+      "name": "cinquieme A",
+      "nbStudent": 30
+    },
+    {
+      "name": "cinquieme B",
+      "nbStudent": 30
+    },
+    {
+      "name": "cinquieme C",
+      "nbStudent": 30
+    },
+    {
+      "name": "cinquieme D",
+      "nbStudent": 30
+    },
+    {
+      "name": "quatrieme A",
+      "nbStudent": 30
+    },
+    {
+      "name": "quatrieme B",
+      "nbStudent": 30
+    },
+    {
+      "name": "quatrieme C",
+      "nbStudent": 30
+    },
+    {
+      "name": "quatrieme D",
+      "nbStudent": 30
+    },
+    {
+      "name": "troisieme A",
+      "nbStudent": 30
+    },
+    {
+      "name": "troisieme B",
+      "nbStudent": 30
+    },
+    {
+      "name": "troisieme C",
+      "nbStudent": 30
+    },
+    {
+      "name": "troisieme D",
+      "nbStudent": 30
+    }
+  ],
   "registeredStudents": [
     {
       "name": "Boucard",
       "firstname": "Quentin",
       "age": "14",
-      "schoolLvl": "quatrieme",
-      "classe": "A",
+      "classe": "quatrieme A",
       "isVaccinate": "oui",
       "dateOfContamination": "2022-01-27",
       "dateOfReturn": "2022-02-03"
@@ -15,8 +80,7 @@
       "name": "Cecillon",
       "firstname": "Lucas",
       "age": "12",
-      "schoolLvl": "sixieme",
-      "classe": "C",
+      "classe": "sixieme C",
       "isVaccinate": "oui",
       "dateOfContamination": "2022-01-20",
       "dateOfReturn": "2022-01-27"

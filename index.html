@@ -51,42 +51,42 @@
     <div class="w3-row-padding w3-margin-bottom">
         <div class="w3-quarter">
             <div class="w3-container w3-red w3-padding-16">
-                <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
+                <div class="w3-left"><i class="fa fa-bookmark w3-xxxlarge"></i></div>
                 <div class="w3-right">
-                    <h3>52</h3>
+                    <h3 id="current_date-time"></h3>
                 </div>
                 <div class="w3-clear"></div>
-                <h4>Messages</h4>
+                <h4>Ajourd'hui</h4>
             </div>
         </div>
         <div class="w3-quarter">
             <div class="w3-container w3-blue w3-padding-16">
-                <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
+                <div class="w3-left"><i class="fa fa-laptop w3-xxxlarge"></i></div>
                 <div class="w3-right">
-                    <h3>99</h3>
+                    <h3 id="nb_absents"></h3>
                 </div>
                 <div class="w3-clear"></div>
-                <h4>Views</h4>
+                <h4>Absents</h4>
             </div>
         </div>
         <div class="w3-quarter">
             <div class="w3-container w3-teal w3-padding-16">
-                <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
+                <div class="w3-left"><i class="fa fa-user w3-xxxlarge"></i></div>
                 <div class="w3-right">
                     <h3>23</h3>
                 </div>
                 <div class="w3-clear"></div>
-                <h4>Shares</h4>
+                <h4>Total d'élèves</h4>
             </div>
         </div>
         <div class="w3-quarter">
             <div class="w3-container w3-orange w3-text-white w3-padding-16">
                 <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
                 <div class="w3-right">
-                    <h3>50</h3>
+                    <h3 id="nb_classes"></h3>
                 </div>
                 <div class="w3-clear"></div>
-                <h4>Users</h4>
+                <h4>Classes</h4>
             </div>
         </div>
     </div>
@@ -293,6 +293,8 @@
     let header = document.querySelector('header');
     let section = document.querySelector('section');
 
+    let nbAbsentStudent = 0;
+
     let requestURL  = 'https://dawnace01.github.io/JSON/database.json';
     //let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
     let request = new XMLHttpRequest();
@@ -300,9 +302,13 @@
     request.responseType = 'json';
     request.send();
     request.onload = function() {
-        let superHeroes = request.response;
-        populateHeader(superHeroes);
-        showHeroes(superHeroes);
+        let students = request.response;
+
+        document.getElementById("nb_absents").textContent = students['registeredStudents'].length;
+        document.getElementById("nb_classes").textContent = students['classes'].length;
+
+        //populateHeader(students);
+        //showStudents(students);
     }
 
     function populateHeader(jsonObj) {
@@ -311,10 +317,11 @@
         header.appendChild(myH1);
     }
 
-    function showHeroes(jsonObj) {
+    function showStudents(jsonObj) {
         let students = jsonObj['registeredStudents'];
+        nbAbsentStudent = students.length;
 
-        for (let i = 0; i < students.length; i++) {
+        for (let i = 0; i < nbAbsentStudent; i++) {
             let myArticle = document.createElement('article');
             let myH2 = document.createElement('h2');
             let myPara1 = document.createElement('p');
@@ -325,8 +332,8 @@
 
             myH2.textContent = students[i].firstname + " " + students[i].name;
             myPara1.textContent = 'Age: ' + students[i].age;
-            myPara2.textContent = 'Classe: ' + students[i].schoolLvl + " " + students[i].classe;
-            myPara3.textContent = 'Vacciné.e:' + students[i].isVacinnate;
+            myPara2.textContent = 'Classe: ' + students[i].classe;
+            myPara3.textContent = 'Vacciné.e:' + students[i].isVaccinate;
 
             tempDate = new Date(students[i].dateOfContamination);
             myPara4.textContent = 'Date de contamination: ' + tempDate.toLocaleDateString("fr");
@@ -343,6 +350,8 @@
             section.appendChild(myArticle);
         }
     }
+
+    document.getElementById("current_date-time").textContent = new Date(Date.now()).toLocaleDateString("fr");
 </script>
 
 </body>
