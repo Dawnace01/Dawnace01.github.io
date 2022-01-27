@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
+<head>
+    <title>Décompte Absents</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 <body class="w3-light-grey">
-
-<header>
-</header>
-
-<section>
-</section>
 
 <!-- Top container -->
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
@@ -29,10 +25,10 @@
     </div>
     <div class="w3-bar-block">
         <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Fermer</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-eye fa-fw"></i>  Vue globale</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Ajout d'un élève</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  Historique</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Paramètres</a>
+        <a href="#vue-globale" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-eye fa-fw"></i>  Vue globale</a>
+        <a href="#ajout-eleve" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>  Ajout d'un élève</a>
+        <a href="#historique" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  Historique</a>
+        <a href="#parametres" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Paramètres</a>
     </div>
 </nav>
 
@@ -44,9 +40,9 @@
 <div class="w3-main" style="margin-left:300px;margin-top:43px;">
 
     <!-- Header -->
-    <header class="w3-container" style="padding-top:22px">
-        <h5><b><i class="fa fa-dashboard"></i> Statistiques Covid-19 Collège</b></h5>
-    </header>
+    <div id="vue-globale" class="w3-container" style="padding-top:22px">
+        <h5><b><i class="fa fa-eye fa-fw"></i>  Vue globale</b></h5>
+    </div>
 
     <div class="w3-row-padding w3-margin-bottom">
         <div class="w3-quarter">
@@ -73,7 +69,7 @@
             <div class="w3-container w3-teal w3-padding-16">
                 <div class="w3-left"><i class="fa fa-user w3-xxxlarge"></i></div>
                 <div class="w3-right">
-                    <h3>23</h3>
+                    <h3 id="total-students"></h3>
                 </div>
                 <div class="w3-clear"></div>
                 <h4>Total d'élèves</h4>
@@ -91,62 +87,14 @@
         </div>
     </div>
 
-    <div class="w3-panel">
-        <div class="w3-row-padding" style="margin:0 -16px">
-            <div class="w3-third">
-                <h5>Regions</h5>
-                <img src="/w3images/region.jpg" style="width:100%" alt="Google Regional Map">
-            </div>
-            <div class="w3-twothird">
-                <h5>Feeds</h5>
-                <table class="w3-table w3-striped w3-white">
-                    <tr>
-                        <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-                        <td>New record, over 90 views.</td>
-                        <td><i>10 mins</i></td>
-                    </tr>
-                    <tr>
-                        <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
-                        <td>Database error.</td>
-                        <td><i>15 mins</i></td>
-                    </tr>
-                    <tr>
-                        <td><i class="fa fa-users w3-text-yellow w3-large"></i></td>
-                        <td>New record, over 40 users.</td>
-                        <td><i>17 mins</i></td>
-                    </tr>
-                    <tr>
-                        <td><i class="fa fa-comment w3-text-red w3-large"></i></td>
-                        <td>New comments.</td>
-                        <td><i>25 mins</i></td>
-                    </tr>
-                    <tr>
-                        <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
-                        <td>Check transactions.</td>
-                        <td><i>28 mins</i></td>
-                    </tr>
-                    <tr>
-                        <td><i class="fa fa-laptop w3-text-red w3-large"></i></td>
-                        <td>CPU overload.</td>
-                        <td><i>35 mins</i></td>
-                    </tr>
-                    <tr>
-                        <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
-                        <td>New shares.</td>
-                        <td><i>39 mins</i></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-    <hr>
     <div class="w3-container">
-        <h5>General Stats</h5>
-        <p>New Visitors</p>
+        <h5>Statistiques générales</h5>
+        <p>Total d'élèves absents</p>
         <div class="w3-grey">
-            <div class="w3-container w3-center w3-padding w3-green" style="width:25%">+25%</div>
+            <div class="w3-container w3-center w3-padding w3-green" id="totalStudentsRegistred" style="width:25%">25%</div>
         </div>
 
+        <!--
         <p>New Users</p>
         <div class="w3-grey">
             <div class="w3-container w3-center w3-padding w3-orange" style="width:50%">50%</div>
@@ -156,38 +104,24 @@
         <div class="w3-grey">
             <div class="w3-container w3-center w3-padding w3-red" style="width:75%">75%</div>
         </div>
+        -->
     </div>
     <hr>
 
     <div class="w3-container">
-        <h5>Countries</h5>
+        <h5>Liste des élèves absents</h5>
         <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-            <tr>
-                <td>United States</td>
-                <td>65%</td>
-            </tr>
-            <tr>
-                <td>UK</td>
-                <td>15.7%</td>
-            </tr>
-            <tr>
-                <td>Russia</td>
-                <td>5.6%</td>
-            </tr>
-            <tr>
-                <td>Spain</td>
-                <td>2.1%</td>
-            </tr>
-            <tr>
-                <td>India</td>
-                <td>1.9%</td>
-            </tr>
-            <tr>
-                <td>France</td>
-                <td>1.5%</td>
-            </tr>
-        </table><br>
-        <button class="w3-button w3-dark-grey">More Countries  <i class="fa fa-arrow-right"></i></button>
+            <thead>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Classe</th>
+                    <th>Départ</th>
+                    <th>Retour</th>
+            </thead>
+            <tbody id="tableOfStudents">
+
+            </tbody>
+        </table>
     </div>
     <hr>
     <div class="w3-container">
@@ -207,53 +141,20 @@
             </li>
         </ul>
     </div>
-    <hr>
 
-    <div class="w3-container">
-        <h5>Recent Comments</h5>
-        <div class="w3-row">
-            <div class="w3-col m2 text-center">
-                <img class="w3-circle" src="/w3images/avatar3.png" style="width:96px;height:96px">
-            </div>
-            <div class="w3-col m10 w3-container">
-                <h4>John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
-                <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
-            </div>
-        </div>
-
-        <div class="w3-row">
-            <div class="w3-col m2 text-center">
-                <img class="w3-circle" src="/w3images/avatar1.png" style="width:96px;height:96px">
-            </div>
-            <div class="w3-col m10 w3-container">
-                <h4>Bo <span class="w3-opacity w3-medium">Sep 28, 2014, 10:15 PM</span></h4>
-                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
-            </div>
-        </div>
+    <!-- Header -->
+    <div id="ajout-eleve" class="w3-container" style="padding-top:22px">
+        <h5><b><i class="fa fa-user fa-fw"></i>  Ajout d'un élève</b></h5>
     </div>
-    <br>
-    <div class="w3-container w3-dark-grey w3-padding-32">
-        <div class="w3-row">
-            <div class="w3-container w3-third">
-                <h5 class="w3-bottombar w3-border-green">Demographic</h5>
-                <p>Language</p>
-                <p>Country</p>
-                <p>City</p>
-            </div>
-            <div class="w3-container w3-third">
-                <h5 class="w3-bottombar w3-border-red">System</h5>
-                <p>Browser</p>
-                <p>OS</p>
-                <p>More</p>
-            </div>
-            <div class="w3-container w3-third">
-                <h5 class="w3-bottombar w3-border-orange">Target</h5>
-                <p>Users</p>
-                <p>Active</p>
-                <p>Geo</p>
-                <p>Interests</p>
-            </div>
-        </div>
+
+    <!-- Header -->
+    <div id="historique" class="w3-container" style="padding-top:22px">
+        <h5><b><i class="fa fa-history fa-fw"></i>  Historique</b></h5>
+    </div>
+
+    <!-- Header -->
+    <div id="parametres" class="w3-container" style="padding-top:22px">
+        <h5><b><i class="fa fa-cog fa-fw"></i>  Paramètres</b></h5>
     </div>
 
     <!-- Footer -->
@@ -288,71 +189,7 @@
         mySidebar.style.display = "none";
         overlayBg.style.display = "none";
     }
-
-    //JSON parsage
-    let header = document.querySelector('header');
-    let section = document.querySelector('section');
-
-    let nbAbsentStudent = 0;
-
-    let requestURL  = 'https://dawnace01.github.io/JSON/database.json';
-    //let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
-    let request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-    request.responseType = 'json';
-    request.send();
-    request.onload = function() {
-        let students = request.response;
-
-        document.getElementById("nb_absents").textContent = students['registeredStudents'].length;
-        document.getElementById("nb_classes").textContent = students['classes'].length;
-
-        //populateHeader(students);
-        //showStudents(students);
-    }
-
-    function populateHeader(jsonObj) {
-        let myH1 = document.createElement('h1');
-        myH1.textContent = jsonObj['college'];
-        header.appendChild(myH1);
-    }
-
-    function showStudents(jsonObj) {
-        let students = jsonObj['registeredStudents'];
-        nbAbsentStudent = students.length;
-
-        for (let i = 0; i < nbAbsentStudent; i++) {
-            let myArticle = document.createElement('article');
-            let myH2 = document.createElement('h2');
-            let myPara1 = document.createElement('p');
-            let myPara2 = document.createElement('p');
-            let myPara3 = document.createElement('p');
-            let myPara4 = document.createElement('p');
-            let myPara5 = document.createElement('p');
-
-            myH2.textContent = students[i].firstname + " " + students[i].name;
-            myPara1.textContent = 'Age: ' + students[i].age;
-            myPara2.textContent = 'Classe: ' + students[i].classe;
-            myPara3.textContent = 'Vacciné.e:' + students[i].isVaccinate;
-
-            tempDate = new Date(students[i].dateOfContamination);
-            myPara4.textContent = 'Date de contamination: ' + tempDate.toLocaleDateString("fr");
-            tempDate = new Date(students[i].dateOfReturn);
-            myPara5.textContent = 'Date de retour: ' + tempDate.toLocaleDateString("fr");
-
-            myArticle.appendChild(myH2);
-            myArticle.appendChild(myPara1);
-            myArticle.appendChild(myPara2);
-            myArticle.appendChild(myPara3);
-            myArticle.appendChild(myPara4);
-            myArticle.appendChild(myPara5);
-
-            section.appendChild(myArticle);
-        }
-    }
-
-    document.getElementById("current_date-time").textContent = new Date(Date.now()).toLocaleDateString("fr");
 </script>
-
+<script src="script.js"></script>
 </body>
 </html>

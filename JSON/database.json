@@ -71,7 +71,7 @@
       "name": "Boucard",
       "firstname": "Quentin",
       "age": "14",
-      "classe": "quatrieme A",
+      "classe": "4eme A",
       "isVaccinate": "oui",
       "dateOfContamination": "2022-01-27",
       "dateOfReturn": "2022-02-03"
@@ -80,7 +80,79 @@
       "name": "Cecillon",
       "firstname": "Lucas",
       "age": "12",
-      "classe": "sixieme C",
+      "classe": "6eme C",
+      "isVaccinate": "oui",
+      "dateOfContamination": "2022-01-20",
+      "dateOfReturn": "2022-01-27"
+    },
+    {
+      "name": "Boucard",
+      "firstname": "Quentin",
+      "age": "14",
+      "classe": "4eme A",
+      "isVaccinate": "oui",
+      "dateOfContamination": "2022-01-27",
+      "dateOfReturn": "2022-02-03"
+    },
+    {
+      "name": "Cecillon",
+      "firstname": "Lucas",
+      "age": "12",
+      "classe": "6eme C",
+      "isVaccinate": "oui",
+      "dateOfContamination": "2022-01-20",
+      "dateOfReturn": "2022-01-27"
+    },
+    {
+      "name": "Boucard",
+      "firstname": "Quentin",
+      "age": "14",
+      "classe": "4eme A",
+      "isVaccinate": "oui",
+      "dateOfContamination": "2022-01-27",
+      "dateOfReturn": "2022-02-03"
+    },
+    {
+      "name": "Cecillon",
+      "firstname": "Lucas",
+      "age": "12",
+      "classe": "6eme C",
+      "isVaccinate": "oui",
+      "dateOfContamination": "2022-01-20",
+      "dateOfReturn": "2022-01-27"
+    },
+    {
+      "name": "Boucard",
+      "firstname": "Quentin",
+      "age": "14",
+      "classe": "4eme A",
+      "isVaccinate": "oui",
+      "dateOfContamination": "2022-01-27",
+      "dateOfReturn": "2022-02-03"
+    },
+    {
+      "name": "Cecillon",
+      "firstname": "Lucas",
+      "age": "12",
+      "classe": "6eme C",
+      "isVaccinate": "oui",
+      "dateOfContamination": "2022-01-20",
+      "dateOfReturn": "2022-01-27"
+    },
+    {
+      "name": "Boucard",
+      "firstname": "Quentin",
+      "age": "14",
+      "classe": "4eme A",
+      "isVaccinate": "oui",
+      "dateOfContamination": "2022-01-27",
+      "dateOfReturn": "2022-02-03"
+    },
+    {
+      "name": "Cecillon",
+      "firstname": "Lucas",
+      "age": "12",
+      "classe": "6eme C",
       "isVaccinate": "oui",
       "dateOfContamination": "2022-01-20",
       "dateOfReturn": "2022-01-27"
