@@ -327,8 +327,11 @@
             myPara1.textContent = 'Age: ' + students[i].age;
             myPara2.textContent = 'Classe: ' + students[i].schoolLvl + " " + students[i].classe;
             myPara3.textContent = 'Vacciné.e:' + students[i].isVacinnate;
-            myPara4.textContent = 'Date de contamination: ' + students[i].dateOfContamination;
-            myPara5.textContent = 'Date de retour:' + students[i].dateOfReturn;
+
+            tempDate = new Date(students[i].dateOfContamination);
+            myPara4.textContent = 'Date de contamination: ' + tempDate.toLocaleDateString("fr");
+            tempDate = new Date(students[i].dateOfReturn);
+            myPara5.textContent = 'Date de retour: ' + tempDate.toLocaleDateString("fr");
 
             myArticle.appendChild(myH2);
             myArticle.appendChild(myPara1);
@@ -340,7 +343,6 @@
             section.appendChild(myArticle);
         }
     }
-
 </script>
 
 </body>
