@@ -1,16 +1,22 @@
 
 //JSON parsage
-let header = document.querySelector('header');
-let section = document.querySelector('section');
-
 let nbAbsentStudent = 0;
 
-let requestURL  = 'https://dawnace01.github.io/JSON/database.json';
-//let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
 let request = new XMLHttpRequest();
-request.open('GET', requestURL);
+
+
+request.onreadystatechange = () => {
+    if (request.readyState == XMLHttpRequest.DONE) {
+        console.log(request.response);
+    }
+};
+
+//request.open("GET", "https://api.jsonbin.io/b/61f424851960493ad1841aee", true);
+request.open("GET", "https://dawnace01.github.io/JSON/database.json");
 request.responseType = 'json';
+//request.setRequestHeader("secret-key", "$2b$10$7iQ7yLiiN/wxhG.s09cdh.WWU94JQY6vfaMD3l0pIq2bZI1PT/hQG");
 request.send();
+
 request.onload = function() {
     let students = request.response;
     let registeredStudents = students['registeredStudents'].length;
@@ -23,9 +29,9 @@ request.onload = function() {
         totalStudents += students["classes"][i].nbStudent;
     }
     document.getElementById("total-students").textContent = totalStudents;
-    let totalStudentsRegistred = Math.ceil((registeredStudents / totalStudents) * 100);
-    document.getElementById("totalStudentsRegistred").setAttribute("style","width:" + totalStudentsRegistred + "%");
-    document.getElementById("totalStudentsRegistred").textContent = totalStudentsRegistred + "%";
+    let totalStudentsRegistered = Math.ceil((registeredStudents / totalStudents) * 100);
+    document.getElementById("totalStudentsRegistred").setAttribute("style","width:" + (100 - totalStudentsRegistered) + "%");
+    document.getElementById("totalStudentsRegistred").textContent = (100 - totalStudentsRegistered) + "%";
 
     for (let i = 0; i < students['registeredStudents'].length; i++) {
         let row = document.createElement('tr');
@@ -91,5 +97,3 @@ function showStudents(jsonObj) {
         section.appendChild(myArticle);
     }
 }
-
-document.getElementById("current_date-time").textContent = new Date(Date.now()).toLocaleDateString("fr");
