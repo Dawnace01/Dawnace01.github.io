@@ -39,7 +39,7 @@ function printNbClasses($pdo){
 }
 
 function printAllStudentsInTable($pdo){
-    $sql = $pdo->prepare("SELECT DISTINCT * FROM registeredStudents");
+    $sql = $pdo->prepare("SELECT DISTINCT * FROM registeredStudents ORDER BY name");
     $sql->execute();
     $result = $sql->fetchAll();
     if (!$result)

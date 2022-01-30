@@ -3,6 +3,8 @@
 include_once "include/pdoSettings.php";
 include_once "include/utils.php";
 
+$pdo->exec("UPDATE main.classe SET name = REPLACE(name,' ','-')");
+
 delStudentBack($pdo);
 ?>
 <!DOCTYPE html>
@@ -419,7 +421,9 @@ delStudentBack($pdo);
     <!-- Footer -->
     <footer class="w3-container w3-padding-16 w3-light-grey">
         <h3><b><i class="fa fa-info fa-fw"></i>  Informations pratiques</b></h3>
-        <p>Site web développé par ©<a href="https://www.github.com/Dawnace01/" target="_blank">Lucas Cécillon</a> et hébergé par <code>000webhost</code>.<br>Une idée de Quentin Boucard.</p>
+        <p>Site web développé par ©<a href="https://www.github.com/Dawnace01/" target="_blank">Lucas Cécillon</a> et hébergé par <code>000webhost</code>.</p>
+        <p>Une idée de Quentin Boucard.</p>
+        <p><i>Dernière mise à jour : 30/01/2022</i></p>
     </footer>
 
     <!-- End page content -->
@@ -482,7 +486,7 @@ delStudentBack($pdo);
         let textWithoutComa = text.replace(",","");
         let splitText = textWithoutComa.split(" ");
 
-        window.location.replace("/index.php?search=" + search + "&modify=student&name=" + splitText[0] + "&firstname=" + splitText[1] + "&classe=" + splitText[2] + "+" + splitText[3] + "#eleve");
+        window.location.replace("/index.php?search=" + search + "&modify=student&name=" + splitText[0] + "&firstname=" + splitText[1] + "&classe=" + splitText[2] + "#eleve");
     }
 
     function refreshGroup(){
@@ -491,7 +495,7 @@ delStudentBack($pdo);
         let textWithoutComa = text.replace(",","");
         let splitText = textWithoutComa.split(" ");
 
-        window.location.replace("/index.php?search=" + search + "&modify=groups&nameGroup=" + splitText[0] + "+" + splitText[1] + "&nbStudentGroup=" + splitText[2] + "#groupe");
+        window.location.replace("/index.php?search=" + search + "&modify=groups&nameGroup=" + splitText[0] + "&nbStudentGroup=" + splitText[1] + "#groupe");
     }
 
     <?php
